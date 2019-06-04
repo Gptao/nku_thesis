@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0041)http://app.uio.no/ifi/texcount/online.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="start" href="http://app.uio.no/ifi/texcount/index.html" type="text/html" title="TeXcount: LaTeX word count"><link rel="alternate" type="application/rss+xml" href="http://app.uio.no/ifi/texcount/rss.xml" title="News and updates">
+<link rel="stylesheet" href="./TeXcount web service (version 3.1.1)_files/default.css" type="text/css">
+<link rel="stylesheet" href="./TeXcount web service (version 3.1.1)_files/menu.css" type="text/css">
+<link rel="stylesheet" href="./TeXcount web service (version 3.1.1)_files/service.css" type="text/css">
+<!--[if lt IE 7]>
+<link rel='stylesheet' href='fix_oldIE.css' type='text/css'>
+<![endif]-->
+<script type="text/javascript" src="./TeXcount web service (version 3.1.1)_files/popup.js.下载"></script>
+<script type="text/javascript" src="./TeXcount web service (version 3.1.1)_files/toggle.js.下载"></script>
+<link rel="shortcut icon" href="http://app.uio.no/ifi/texcount/texcount.ico">
+<title>TeXcount web service (version 3.1.1)</title>
+</head>
+
+<body onload="setup_popdiv();setup_toggles();">
+
+<div id="rss">
+<a class="rss" rel="alternate" type="application/rss+xml" href="http://app.uio.no/ifi/texcount/rss.xml" title="TeXcount: news and updates"></a>
+</div>
+
+<div id="menubar"><ul>
+<li class="head"><a href="http://app.uio.no/ifi/texcount/index.html" title="TeXcount main page">Main page</a></li>
+<li class="rule">&nbsp;
+</li><li class="head"><a href="http://app.uio.no/ifi/texcount/intro.html" title="Introduction to TeXcount">TeXcount</a></li>
+<li><a href="http://app.uio.no/ifi/texcount/whatitdoes.html" title="What TeXcount does">What it does</a></li>
+<li><a href="http://app.uio.no/ifi/texcount/howto.html" title="How to run TeXcount">How to use</a></li>
+<li><a href="http://app.uio.no/ifi/texcount/screenshot.html" title="Screenshots and examples">Screenshots</a></li>
+<li><a href="http://app.uio.no/ifi/texcount/faq.html" title="Frequently asked questions">FAQ</a></li>
+<li><a href="http://app.uio.no/ifi/texcount/problems.html" title="Known problems and issues">Known issues</a></li>
+<li><a href="http://app.uio.no/ifi/texcount/about.html" title="About TeXcount">About</a></li>
+<li class="head"><a href="http://app.uio.no/ifi/texcount/download.html" title="Download the latest version of TeXcount">Download</a></li>
+<li><a href="http://app.uio.no/ifi/texcount/utilities.html" title="Supporting scripts, applications and files not included in the package">Supporting scripts</a></li>
+<li class="head" id="presentitem"><a href="http://app.uio.no/ifi/texcount/online.php" title="Run the TeXcount online service">Web interface</a></li>
+<li><a href="http://app.uio.no/ifi/texcount/online_versions.html" title="Run older versions of the TeXcount online service">Older versions</a></li>
+<li class="head"><a href="http://app.uio.no/ifi/texcount/documentation.html" title="Documentation and manuals">Documentation</a></li>
+<li class="head"><a href="http://app.uio.no/ifi/texcount/news.php" title="News, change notifications, etc.">News</a></li>
+<li><a href="http://app.uio.no/ifi/texcount/history.html" title="Older version and change history">Change history</a></li>
+<li class="rule">&nbsp;
+</li><li><a href="http://app.uio.no/ifi/texcount/contact.html" title="Email us at einarro@ifi.uio.no">Contact info</a></li>
+</ul></div>
+
+<div id="contents" class="topcard plaintopcard">
+
+
+<h1>TeXcount web service (version 3.1.1)</h1>
+
+<div class="notam">
+<p class="nb">TeXcount is shifting to the more secure HTTPS protocol.
+You may want to update you refereces to
+<a href="https://app.uio.no/ifi/texcount/online.php">https://app.uio.no/ifi/texcount/online.php</a>.</p>
+</div>
+<hr>
+<p>This page runs TeXcount to count the words in LaTeX documents.
+You can also run
+<a href="http://app.uio.no/ifi/texcount/online_versions.html">other/older versions of TeXcount</a>,
+or <a href="http://app.uio.no/ifi/texcount/download.html">download the script</a> and run it on your own computer.</p>
+
+<p>For help on options and adding macro handling rules, consult the <a href="http://app.uio.no/ifi/texcount/DOC/TeXcount_3_1_1.pdf">documentation</a>.</p>
+
+<div class="webform">
+<form method="post" action="http://app.uio.no/cgi-bin/ifi/texcount/texcount_3_1_1.cgi" name="latexcount" enctype="multipart/form-data">
+
+<div class="group">
+<div class="block">
+<label for="verbosity">Parsing details<a href="http://app.uio.no/ifi/texcount/online.php#help_verbosity" title="Click for help" class="helplink" onclick="return popdiv(this,&quot;help_verbosity&quot;)">?</a></label>
+<select name="verbosity" id="verbosity" title="Amount of parsing details in the output">
+<option value="0">None</option>
+<option value="1">Brief</option>
+<option value="2">Moderate</option>
+<option value="3" selected="">Verbose</option>
+</select>
+</div>
+
+<div class="block">
+<label for="subcounts">Subcounts<a href="http://app.uio.no/ifi/texcount/online.php#help_subcounts" title="Click for help" class="helplink" onclick="return popdiv(this,&quot;help_subcounts&quot;)">?</a></label>
+<select name="subcounts" id="subcounts" title="Give counts per section">
+<option value="none">None</option>
+<option value="part">Part</option>
+<option value="chapter">Chapter</option>
+<option value="section">Section</option>
+<option value="subsection" selected="">Subsection</option>
+</select>
+</div>
+
+<div class="block">
+<label for="sum">Cumulative sum<a href="http://app.uio.no/ifi/texcount/online.php#help_sum" title="Click for help" class="helplink" onclick="return popdiv(this,&quot;help_sum&quot;)">?</a></label>
+<select name="sum" id="sum" title="Give cumulative counts at the end of each line">
+<option value="0" selected="">None</option>
+<option value="1">Text words</option>
+<option value="111">All words</option>
+<option value="1110011">Words+math</option>
+</select>
+</div>
+
+<div class="block">
+<label for="wordrule">Parsing rules<a href="http://app.uio.no/ifi/texcount/online.php#help_wordrule" title="Click for help" class="helplink" onclick="return popdiv(this,&quot;help_wordrule&quot;)">?</a></label>
+<select name="wordrule" id="wordrule" title="Strictness of rules to identify words, option, etc.">
+<option value="normal" selected="">Normal</option>
+<option value="relaxed">Relaxed</option>
+<option value="restricted">Restricted</option>
+</select>
+</div>
+
+<div class="block">
+<label for="incbib">Bibliography<a href="http://app.uio.no/ifi/texcount/online.php#help_incbib" title="Click for help" class="helplink" onclick="return popdiv(this,&quot;help_incbib&quot;)">?</a></label>
+<select name="incbib" id="incbib" title="Ignore or include bibliography in word count">
+<option value="0" selected="">Ignore</option>
+<option value="1">Include</option>
+</select>
+</div>
+
+<div class="block">
+<label for="language">Language/word type<a href="http://app.uio.no/ifi/texcount/online.php#help_language" title="Click for help" class="helplink" onclick="return popdiv(this,&quot;help_language&quot;)">?</a></label>
+<select name="language" id="language" title="Language type and what is counted as words">
+<option value="count-all" selected="">All words</option>
+<option value="words-only">Words only (alphabetic)</option>
+<option value="letters">Letters &amp; logograms</option>
+<option value="letters-only">Letters (alphabetic)</option>
+<option value="chinese">Chinese</option>
+<option value="chinese-only">Chinese only</option>
+<option value="japanese">Japanese</option>
+<option value="japanese-only">Japanese only</option>
+<option value="korean">Korean characters</option>
+<option value="korean-only">Korean characters only</option>
+<option value="korean-words">Korean words</option>
+<option value="korean-words-only">Korean words only</option>
+</select>
+</div>
+
+<div class="block">
+<label for="wordfreq">Word freq.<a href="http://app.uio.no/ifi/texcount/online.php#help_wordfreq" title="Click for help" class="helplink" onclick="return popdiv(this,&quot;help_wordfreq&quot;)">?</a></label>
+<select name="wordfreq" id="wordfreq" title="Count word frequencies">
+<option value="0" selected="">none</option>
+<option value="stat">summary</option>
+<option value="1">all</option>
+<option value="2">≥2</option>
+<option value="5">≥5</option>
+<option value="10">≥10</option>
+<option value="20">≥20</option>
+<option value="50">≥50</option>
+<option value="100">≥100</option>
+<option value="200">≥200</option>
+<option value="500">≥500</option>
+<option value="1000">≥1000</option>
+</select>
+</div>
+
+</div>
+
+<div class="group">
+
+<div class="block">
+<label for="latexfile">LaTeX file<a href="http://app.uio.no/ifi/texcount/online.php#help_latexfile" title="Click for help" class="helplink" onclick="return popdiv(this,&quot;help_latexfile&quot;)">?</a></label>
+<input name="latexfile" id="latexfile" title="Select LaTeX file to be processed" size="50" maxlength="1000000" type="file">
+</div>
+
+<div class="block">
+<label for="fileencoding">File encoding<a href="http://app.uio.no/ifi/texcount/online.php#help_fileencoding" title="Click for help" class="helplink" onclick="return popdiv(this,&quot;help_fileencoding&quot;)">?</a></label>
+<select name="fileencoding" id="fileencoding" title="File encoding (how non-ASCII characters are represented)">
+<option value="guess" selected="">Auto (guess)</option>
+<option value="utf8">UTF-8</option>
+<option value="latin1">Latin 1 (ISO-8859-1</option>
+</select>
+</div>
+
+</div>
+
+<div class="group">
+
+<div class="block">
+<input class="button" type="submit" value="Submit LaTeX file or LaTeX code" name="count" id="submit">
+</div>
+
+<div class="frameblock">
+<input name="macrousagelog" id="macrousagelog" title="Allow logging of which macros, environments and packages are used" type="checkbox" checked="checked">
+<span class="text">Allow macro usage logging</span>
+<a href="http://app.uio.no/ifi/texcount/online.php#help_macrousagelog" title="Click for help" class="helplink" onclick="return popdiv(this,&quot;help_macrousagelog&quot;)">?</a></div>
+
+</div>
+
+<div class="group">
+
+<div class="block">
+<label for="latexcode">LaTeX code<a href="http://app.uio.no/ifi/texcount/online.php#help_latexcode" title="Click for help" class="helplink" onclick="return popdiv(this,&quot;help_latexcode&quot;)">?</a></label>
+<textarea name="latexcode" id="latexcode" title="LaTeX code" rows="15" cols="80"></textarea>
+</div>
+
+</div>
+
+</form>
+</div>
+
+<div id="help">
+<h2 style="display: none;">Help on options</h2>
+<div id="help_verbosity" class="helpblock" style="display: none;"><h3>Amount of parsing details in the output</h3>
+<p>The amount of parsing detail can be:<br>- None: no details on how the text was parsed<br>- Brief: only counted text shown<br>- Moderate: comments excluded<br>- Verbose: all code shown<br>Colour codes are given to indicate how the different parts have been interpreted.</p>
+</div>
+<div id="help_subcounts" class="helpblock" style="display: none;"><h3>Give counts per section</h3>
+<p>In addition to the total count, subcounts will be produced setting break points at e.g. section headers.</p>
+</div>
+<div id="help_sum" class="helpblock" style="display: none;"><h3>Give cumulative counts at the end of each line</h3>
+<p>Show a total sum. Also show the cumulative sum at the end of each line. The sum may count words in text only, all words (text+headers+captions), or words plus the number of formulae.</p>
+</div>
+<div id="help_wordrule" class="helpblock" style="display: none;"><h3>Strictness of rules to identify words, option, etc.</h3>
+<p>By selecting the relaxed mode, criteria for what is permitted inside words and options is relaxed. The restricted mode, on the other hand, may be used e.g. if TeXcount tends to join words together.</p>
+</div>
+<div id="help_incbib" class="helpblock" style="display: none;"><h3>Ignore or include bibliography in word count</h3>
+<p>By default, the bibliography is not included in the word count. If the bibliography environment, i.e. <tt>thebibliography</tt>, is included in the LaTeX document, however, and bibliography is set to be included, it will still be counted.</p>
+<p>Beware, however, that the bibliography items may be formatted in a way that TeXcount may not interprete as desired, that all numbers will by default be counted as words. It is recommended that the relaxed mode be used to help avoid some formatting problems such as the use of <tt>{U}ppercase</tt> format to indicate capital letters.</p>
+<p>Note that bibliography inclusion may also by set by including the TC-command <tt>%TC:bibinc</tt> in the LaTeX document.</p>
+</div>
+<div id="help_language" class="helpblock" style="display: none;"><h3>Language type and what is counted as words</h3>
+<p>The default is to count all words: TeXcount then tries to count all words in all languages including 'logographic characters' for which each character is counted as a word (e.g. Chinese). To restrict to alphabetic languages, i.e. languages where words are made up of sequences of letters and separated by space, select the alphabetic option. You can also choose to count letters instead of words. </p>
+<p>There are Chinese and Japanese options, which from version 2.3 are no longer required to count Chinese/Japanese characters since they are included in the default option. However, this allows TeXcount to guess at some other file encodings (e.g. GB2312 and Big5 for Chinese), and also restricts the languages and scripts included in the count. Similarly, there are options for Korean (which counts Korean characters) and Korean words (which counts hangul words as words separated by spaces. The alternatives Chinese only etc. try to restrict what is counted, e.g. ignoring other characters and words, but may not be as restrictive as desired.</p>
+<p>More detailed control over which languages and scripts are counted is available in the TeXcount script, but not on this web service. </p>
+<p>I recommend using UTF-8 for all non-ASCII text. For access to a wider range of encodings, you need to download and run the TeXcount script.</p>
+</div>
+<div id="help_wordfreq" class="helpblock" style="display: none;"><h3>Count word frequencies</h3>
+<p>Each word is counted (independent of case) and a summary of words produced in descending order. All words may be listed, or only those occurring sufficient number of times. Although the word count is based on lower case only, TeXcount will retain letters that are consistently upper case.</p>
+</div>
+<div id="help_latexfile" class="helpblock" style="display: none;"><h3>Select LaTeX file to be processed</h3>
+<p>You may provide a LaTeX file to be uploaded to this site and processed with TeXcount: this requires that no LaTeX code is provided in the text area, otherwise the <i>LaTeX code</i> text area will be used instead of the file. The file does not have to be a complete LaTeX document: an included part of a LaTeX document will do as long as all groups are balanced. </p>
+<p>Note that while TeXcount can handle included files, this function is not available on this web service. Hence, only the LaTeX code within the file will be analysed.</p>
+</div>
+<div id="help_fileencoding" class="helpblock" style="display: none;"><h3>File encoding (how non-ASCII characters are represented)</h3>
+<p>If the document only contains ASCII characters, the choice of file encoding makes no difference. However, for languages that use non-Latin letters, i.e. other than A-Z, these are most likely not ASCII and how they are encoded in the file may depend on the choice of encoding. For most purposes, UTF-8 encoding (a Unicode encoding compatible with ASCII) is recommended. If auto is selected, TeXcount will guess which encoding seems more appropriate.</p>
+</div>
+<div id="help_macrousagelog" class="helpblock" style="display: none;"><h3>Allow logging of which macros, environments and packages are used</h3>
+<p>Allow TeXcount to log which macros, environments and packages are being used, and how many times. This is to help improve TeXcount by providing information of which macros and packages are being used and to detect macros and packages for which support could be improved. </p>
+<p>By default, this is turned on. A list of all macros, environments and packages will then be stored on a log file together with how many times they were called. None of the text will be stored. </p>
+<p>If you would rather that this information not be stored, you can uncheck the box.</p>
+</div>
+<div id="help_latexcode" class="helpblock" style="display: none;"><h3>LaTeX code</h3>
+<p>You may enter the LaTeX code to be analysed directly into the <i>LaTeX code</i> text area. This will be processed in the same way as a LaTeX document of file: i.e. it does not have to be a complete LaTeX document, but may be only a part of it, e.g. a file which is included in a LaTeX document, as long as all groups are balanced.</p>
+</div>
+</div>
+
+
+
+
+<br class="ending">
+
+</div>
+
+<div id="lastmodified">Last modified October 28, 2018.</div>
+
+
+
+
+</body></html>
